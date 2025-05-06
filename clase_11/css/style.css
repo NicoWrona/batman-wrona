@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 16px; /*1 rem = al valor de font size en html */
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: #505c7c;
+    background-image: url('../img/batman-logo-small.png'), url('../img/batman-logo-small.png');
+    background-repeat: repeat-y, repeat-y;
+    background-position: top left, top right;
+    background-size: 64px auto, 64px auto;
+}
+
+.league{
+    font-family: "League Gothic", sans-serif;
+}
+
+#main-header{
+    position: sticky;
+    top:0;
+    z-index: 5;
+    background: rgba(255,255,255, 0.5);
+}
+
+#main-header #logo{
+    height: 150px;
+    width: 150px;
+    font-size: 0;
+    background-image: url('../img/batman-logo-small.png');
+    background-size: 150px 150px;
+    background-position: center center;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#main-header .main-navigation{
+    width: 1050px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right;
+}
+
+#main-header .main-navigation ul li{
+    list-style: none;
+    width: 200px;
+    display: inline-block;
+}
+
+#main-header .main-navigation ul li a{
+    text-align: center;
+    padding: 15px 0;
+    margin-left: 20px;
+    text-decoration: none;
+    font-variant: small-caps;
+    font-size: 1.2rem;
+    color: #988829;
+    font-weight: bold;
+    display: block;
+    background-color: #242424;
+    transition: all 0.5s;
+    transform: rotateY(0deg);
+}
+
+#main-header .main-navigation ul li a:hover{
+    background-color: #988829;
+    color: #242424;
+    border-radius:25px;
+    transform: perspective(500px) rotateY(35deg);
+}
+
+
+.container{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-paragraph{
+    font-size: 1.1rem;
+    color: rgb(36,36,36);
+    text-align: justify;
+}
+
+.center-logo{
+    text-align: center;
+}
+
+.banner-home{
+    background: blue;
+    height: 600px;
+    align-content: center;
+    background-image: url('../img/bg-batman-1.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    transition: all 0.7s;
+}
+
+.banner-home h2{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.banner-characters{
+    background: blue;
+    height: 600px;
+    align-content: center;
+    background-image: url('../img/bg-batman-3.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner-multimedia{
+    background: blue;
+    height: 600px;
+    align-content: center;
+    background-image: url('../img/bg-batman-2.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner-home h2,
+.banner-characters h2,
+.banner-multimedia h2{
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+#history h2{
+    text-align: center;
+    font-size: 3rem;
+    color: #fff;
+    margin: 50px 0;
+
+}
+#history div{
+    vertical-align: top;
+    width: 50%;
+    display: inline-block;
+}
+
+#history div p{
+    padding: 20px;
+    border: 1px solid #fff;
+    border-radius: 25px;
+}
+
+#history div figure{
+    padding-left: 40px;
+}
+
+#history div figure img{
+    width: 100%;
+    border-radius: 25px;
+}
+#history div figure img:hover{
+    border-radius: 0px;
+}
+#image-gallery figure{
+    display: inline-block;
+    width: 20%;
+    overflow: hidden;
+}
+
+#image-gallery figure img{
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    padding: 1rem;
+    transform: scale(1);
+    transition: transform 0.5s linear;
+}
+
+#image-gallery figure img:hover{
+    transform: scale(1.4);
+}
+
+#to-top{
+    position:fixed;
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    text-decoration: none;
+    border-radius: 50%;
+    background-color: rgb(36,36,36);
+    bottom: 40px;
+    right: 60px;
+}
+
+#dynamic{
+    animation: dynamic-bg 5s linear infinite alternate;
+}
+
+@keyframes dynamic-bg {
+    0%{
+        background-image: url('../img/bg-batman-1.jpg');
+    }
+
+    50%{
+        background-image: url('../img/bg-batman-2.jpg');
+    }
+
+    100%{
+        background-image: url('../img/bg-batman-3.jpg');
+    }
+}
+
+.rolling{
+    animation: roll-in linear 1s;
+}
+
+@keyframes roll-in {
+    0%{
+        transform: translate(-1000px) rotate(0deg);
+    }
+
+    100%{
+        transform: translate(0px) rotate(720deg);
+    }
+}
+
+.swing-up{
+    animation: swing 0.5s 2s linear both;
+}
+
+@keyframes swing {
+    0%{
+        transform: rotateX(0);
+        transform-origin: top;
+    }
+
+    100%{
+        transform: rotateX(180deg);
+        transform-origin: top;
+    }
+}
